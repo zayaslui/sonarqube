@@ -16,7 +16,7 @@ sudo netstat -tulpena | grep postgres
 descargar binario
 sudo curl -O https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.3.0.34182.zip
 
-
+````
 linux
 mover a /opt
 crear grupo sonar
@@ -49,3 +49,4 @@ sudo ln -s /opt/sonarscanner/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner /u
 
 #test
 sonar-scanner -D sonar.login=mitoken[desde usuario generar token]
+````
