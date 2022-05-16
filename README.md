@@ -1,4 +1,5 @@
 --instalar postgres
+````
 sudo passwd postgres
 su postgres
 createuser sonar
@@ -10,7 +11,7 @@ GRANT ALL PRIVILEGES ON DATABASE sonarqube to sonar;
 sudo systemctl restart postgresql
 sudo systemctl status -l postgresql
 sudo netstat -tulpena | grep postgres
-
+````
 
 descargar binario
 sudo curl -O https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.3.0.34182.zip
