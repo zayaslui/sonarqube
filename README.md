@@ -38,8 +38,13 @@ sonar.web.javaOpts=-Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError
 #error incrementar vm.max_map_count
 echo "vm.max_map_count=262144" >> /etc/sysctl.conf
 
-#crear el servicio
+#crear el servicio script para iniciar el servidor sonarquebe
 /etc/systemd/system/sonarqube.service
+sudo systemctl daemon-reload
+systemctl enable sonarqube.service
+
+#iniciar el servicio
+sudo systemctl start sonarqube.service
 
 
 #firewall
