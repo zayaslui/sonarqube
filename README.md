@@ -19,20 +19,27 @@ sudo curl -O https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8
 ````
 linux
 mover a /opt
-renombrar a sonarqube
-crear grupo sonar
+#renombrar a sonarqube
+#crear grupo sonar
 sudo groupadd sonar
-asignar como propietario de la carpeta sonar
+#asignar como propietario de la carpeta sonar
 sudo useradd -c "SonarQube - User" -d /opt/sonarqube/ -g sonar sonar
 sudo chown sonar:sonar /opt/sonarqube-8.3.0.34182/ -R
 
 //configurar sonar
 
-usuario contraseña url de sonar
+#usuario contraseña url de sonar
 /opt/sonarqube/conf/sonar.properties
+sonar.jdbc.url=jdbc:postgresql://localhost/sonarqube?currentSchema=public
+sonar.jdbc.username=sonar
+sonar.jdbc.password=sonarqube
+sonar.web.javaOpts=-Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError
 
-error incrementar vm.max_map_count
-# echo "vm.max_map_count=262144" >> /etc/sysctl.conf
+#error incrementar vm.max_map_count
+echo "vm.max_map_count=262144" >> /etc/sysctl.conf
+
+#crear el servicio
+/etc/systemd/system/sonarqube.service
 
 
 #firewall
