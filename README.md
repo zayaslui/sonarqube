@@ -19,6 +19,7 @@ sudo curl -O https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8
 ````
 linux
 mover a /opt
+renombrar a sonarqube
 crear grupo sonar
 sudo groupadd sonar
 asignar como propietario de la carpeta sonar
