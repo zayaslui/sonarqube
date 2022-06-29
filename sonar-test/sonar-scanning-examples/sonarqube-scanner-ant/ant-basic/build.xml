@@ -16,6 +16,8 @@
 	<property name="sonar.sources" value="src" />
 	<property name="sonar.binaries" value="target" />
 	<property name="sonar.sourceEncoding" value="UTF-8" />
+	<property name="sonar.login" value="dc6ac332e8558e0a2a468b63d061bfc43a32166d" />
+
 	
 	<!-- ========= Define "regular" targets: clean, compile, ... ========= -->
 	<target name="clean">
@@ -35,7 +37,7 @@
 	<target name="sonar" depends="compile">
 		<taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
 			<!-- Update the following line, or put the "sonar-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
-			<classpath path="path/to/sonar/ant/task/lib/sonarqube-ant-task-*.jar" />
+			<classpath path="/opt/sonarscanner/sonar-scanner-ant/sonarqube-ant-task-2.7.0.1612.jar" />
 		</taskdef>
 		
 		<!-- Execute SonarQube Scanner for Ant Analysis -->

@@ -39,7 +39,8 @@ sudo wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-
 
 modificar el /conf/sonar-scanner.properties para configurar el host del servidor si tenemos otra parte
 
-#convertir el sonar-scanner en ejecutable
+
+#convertir el sonar-scanner en ejecutable 
 sudo chmod +x sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner
 #para ejecutar desde cualquier parte del servidor sin saber exactamente el nombre de la ruta creamos un link simbolico
 sudo ln -s /opt/sonarscanner/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner /usr/local/bin/sonar-scanner
@@ -48,3 +49,41 @@ sudo ln -s /opt/sonarscanner/sonar-scanner-3.2.0.1227-linux/bin/sonar-scanner /u
 
 #test
 sonar-scanner -D sonar.login=mitoken[desde usuario generar token]
+
+#definiciones
+DEUDA TECNICA
+Principales indicadores: fiabilidad, la seguridad y la mantenibilidad
+
+Compuerta de Calidad:  filtro de politicas de calidad de la empresa.
+
+Mantener nuevo codigo
+
+#Integracion de SonarScanner con Apache Ant
+
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube-ant-task/sonarqube-ant-task-2.7.0.1612.jar
+
+sudo mkdir /opt/sonarscanner/sonar-scanner-ant
+sudo mv sonarqube-ant-task-2.7.0.1612.jar /opt/sonarscanner/sonar-scanner-ant/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
