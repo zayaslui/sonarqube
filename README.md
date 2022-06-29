@@ -28,6 +28,9 @@ sudo chown sonar:sonar /opt/sonarqube-8.3.0.34182/ -R
 
 //configurar sonar
 
+usuario contraseña url de sonar
+/opt/sonarqube/conf/sonar.properties
+
 error incrementar vm.max_map_count
 # echo "vm.max_map_count=262144" >> /etc/sysctl.conf
 
